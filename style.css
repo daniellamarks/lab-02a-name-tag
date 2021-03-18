@@ -12,7 +12,7 @@ body{
     "nav content"
     "footer footer";
 
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 2fr 3fr;
     grid-template-rows: 2fr 10fr ;
 }
 
@@ -35,13 +35,68 @@ header h1 {
 nav {
     grid-area: nav;
     border-right: black solid 5px;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 2fr;
 }
 
 nav h2 {
-    margin-left: 10px;
-    text-decoration: underline;
+
 }
 
+.change-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.change-name-wrapper input {
+    width: 50%;
+    margin: 5px;
+    height: 2em;
+    text-align: center;
+}
+
+.colors-wrapper button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.change-name-wrapper button {
+    margin: 5px;
+    border-radius: 15px;
+    font-size: 1em;
+    background-color: white;
+    cursor: pointer;
+    width: 30%;
+}
+
+.change-name-wrapper button:hover {
+    color: white;
+    background-color: black;
+}
+
+#salmon {
+    background-color: salmon;
+}
+
+#lightgreen {
+    background-color: lightseagreen;
+}
+
+#yellow {
+    background-color: goldenrod;
+}
+
+.color {
+    cursor: pointer;
+}
+
+.choose-font {
+    align-self: flex-start;
+}
 
 footer {
     grid-area: footer;
@@ -91,7 +146,7 @@ main {
     /* line-height: 5px; */
 }
 
-.sig {
+#sig {
     font-size: 2em;
     font-style: italic;
     font-family: 'Dancing Script', cursive;

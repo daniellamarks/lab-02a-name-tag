@@ -7,17 +7,41 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Name-tag</title>
 </head>
 <body>
     <header>
     <h1>Name Tag Website</h1>
     </header>
     <nav>
-        <h2>Sidebar</h2>
+        <h2>Customize your nametag</h2>
+        <div class="change-name-wrapper">
+            <input id="input-name" placeholder="your name here">
+            <input id="input-prounoun" placeholder="your pronoun here">
+            <button id="change-button">Change</button>
+            <div>You have changed your name <span id="display-count">0</span> times.</div>
+        </div>
+        <div class="colors-wrapper">
+            <button class="color" id="salmon"></button>
+            <button class="color" id="lightgreen"></button>
+            <button class="color" id="yellow"></button>
+        </div>
+        <div class="choose-font">
+            Choose a font:
+            <select id="input-font" class="font-list" onchange="changeFontStyle(this);">
+
+                <option value="Times New Roman" selected="selected">Times New Roman</option>
+                <option value="Arial">Arial</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Gill Sans">Gill Sans</option>
+
+            </select>
+
+        </div>
     </nav>
     <main>
-        <div class="name-tag">
+        <div class="name-tag" id="name-tag-color">
             <span class="hello">
                 Hello
             </span>
@@ -25,10 +49,10 @@
                 my name is 
             </span>
             <div class="sig-wrap">
-                <span class="sig">
+                <span id="sig">
                 Daniella Marks
                 </span>
-                <span class="pronoun">
+                <span id="pronoun">
                 she/her
                 </span>
             </div>
@@ -39,5 +63,7 @@
     <footer>
         <p>&copy; 2021 daniella marks</p>
     </footer>
+
+<script type="module" src="app.js"></script>
 </body>
 </html>
