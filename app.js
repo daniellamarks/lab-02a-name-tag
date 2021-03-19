@@ -55,10 +55,8 @@ yellowButton.addEventListener("click", () => {
     nameTag.style.backgroundColor = turnYellow;
 });
 
-//myCoolDiv.classLIst.add('something')
-
-//i want 
+//i want to change the font through a dropdown menu 
 
 const changeFontStyle = (font) => {
-	nameTag.style.fontFamily = font.value
+  nameTag.style.fontFamily = font.value
 }
